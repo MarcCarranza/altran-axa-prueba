@@ -3,10 +3,6 @@ import axios from 'axios'
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms))
 
-function* helloSaga() {
-    console.log('Redux-Saga Working')
-}
-
 function* incrementAsync() {
     yield delay(1000)
     yield put({ type: 'INCREMENT' })
@@ -17,10 +13,10 @@ function* watchIncrementAsync() {
 }
 
 function* watchFetchAsync() {
-    yield takeEvery('FETCH', testFetch )
+    yield takeEvery('FETCH', fetchGnomeData)
 }
 
-function* testFetch (){
+function* fetchGnomeData (){
     yield put({ type: 'FETCH_LOADING' })
 
     let response = null
@@ -32,7 +28,7 @@ function* testFetch (){
         .then(res => {
             response = {
                 type: 'FETCH_SUCCESS',
-                data: res.data
+                data: res.data.Brastlewark // TODO: What about this?
             }
         })
         .catch(error => {
@@ -63,8 +59,8 @@ const apiCallRequest = ({
 
 export default function* rootSaga() {
     yield all([
-        helloSaga(),
         watchIncrementAsync(),
+        fetchGnomeData(),
         watchFetchAsync()
     ])
 }

@@ -1,16 +1,13 @@
-import { Counter } from "./components/Counter";
+// Dependencies
 import { connect } from 'react-redux'
+
+// Pages
+import { Home } from './pages/Home'
 
 function AppComponent({ count, onIncrement, onDecrement, onIncrementAsync, fetchData }) {
     return (
         <div>
-            <Counter
-                value={count}
-                onIncrement={onIncrement}
-                onDecrement={onDecrement}
-                onIncrementAsync={onIncrementAsync}
-                fetch={fetchData}
-            />
+            <Home/>
         </div>
     )
 }
