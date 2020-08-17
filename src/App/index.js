@@ -1,11 +1,9 @@
-import { Example } from "./pages/Example";
 import { Counter } from "./components/Counter";
 import { connect } from 'react-redux'
 
 function AppComponent({ count, onIncrement, onDecrement, onIncrementAsync, fetchData }) {
     return (
         <div>
-            <Example />
             <Counter
                 value={count}
                 onIncrement={onIncrement}

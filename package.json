@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-skeleton",
+  "name": "gnomeet",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Marc Carranza",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
