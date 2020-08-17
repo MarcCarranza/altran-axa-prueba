@@ -6,7 +6,7 @@ Summary of the technologies used, short documentation and explanation of the dec
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
 * [React-Redux](https://react-redux.js.org/)
-* [React-Saga](https://redux-saga.js.org/)
+* [Redux-Saga](https://redux-saga.js.org/)
 * [Lodash](https://lodash.com/)
 * [Axios](https://github.com/axios/axios)
 * [Babel](https://babeljs.io/)
