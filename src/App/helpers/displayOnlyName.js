@@ -1,3 +1,3 @@
 export const displayOnlyName = (name) => {
-    return name
+    return _.words(name)[0]
 }
