@@ -1,4 +1,4 @@
-# Front-end AXA assessment
+# Front-end AXA assessment (AKA gnomeet)
 Summary of the technologies used, short documentation and explanation of the decisions taken.
 
 ## Main Libraries
