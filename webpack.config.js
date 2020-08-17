@@ -31,6 +31,12 @@ module.exports = {
                     }
                 ]
             },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf|TTF)$/,
+                use: [
+                    'file-loader'
+                ]
+            }
         ]
     },
     plugins: [

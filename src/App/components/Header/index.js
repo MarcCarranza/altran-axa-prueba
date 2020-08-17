@@ -1,7 +1,10 @@
+// Styles
+import './header.css'
+
 function HeaderComponent () {
     return (
-        <header>
-            <h1>gnomeet</h1>
+        <header className='header'>
+            <h1 className='header__title'>gnomeet</h1>
         </header>
     )
 }

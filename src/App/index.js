@@ -4,7 +4,10 @@ import { connect } from 'react-redux'
 // Pages
 import { Home } from './pages/Home'
 
-function AppComponent({ count, onIncrement, onDecrement, onIncrementAsync, fetchData }) {
+// Style
+import './app.css'
+
+function AppComponent({}) {
     return (
         <div>
             <Home/>

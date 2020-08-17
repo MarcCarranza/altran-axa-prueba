@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "laconick";
+  src: 
+    url("/public/fonts/Laconick-NormalA.woff2") format("woff2"),
+    url("/public/fonts/Laconick-NormalA.woff") format("woff");
+}
+
+@font-face {
+    font-family: "lato";
+    src: url("/public/fonts/Lato-Regular.ttf") format("truetype");
+}
+
+* {
+    font-family: 'lato';
+}

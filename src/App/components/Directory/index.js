@@ -4,9 +4,12 @@ import { connect } from 'react-redux'
 // Components
 import { GnomeCard } from '../GnomeCard'
 
+// Style
+import './directory.css'
+
 function DirectoryComponent({ data }) {
     return (
-        <div>
+        <div className="gnome-directory">
             {data.length > 0 && data.map(gnomeData => (
                 <GnomeCard
                     key={gnomeData.id} 
