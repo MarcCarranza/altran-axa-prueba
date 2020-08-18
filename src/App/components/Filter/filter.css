@@ -8,6 +8,7 @@
 
 .filter__open {
     height: 200px;
+    max-height: auto;
 }
 
 .filter__form {
