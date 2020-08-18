@@ -20,9 +20,6 @@ const mapStateToProps = ({ count }) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    onIncrement: () => dispatch({ type: 'INCREMENT' }),
-    onDecrement: () => dispatch({ type: 'DECREMENT' }),
-    onIncrementAsync: () => dispatch({ type: 'INCREMENT_ASYNC' }),
     fetchData: () => dispatch({ type: 'FETCH' })
 })
 

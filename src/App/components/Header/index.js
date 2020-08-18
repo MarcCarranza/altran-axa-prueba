@@ -10,7 +10,7 @@ import { faFilter, faSearch } from '@fortawesome/free-solid-svg-icons'
 import './header.css'
 
 function HeaderComponent() {
-    const [isFilterOpen, setIsFilterOpen] = useState(true)
+    const [isFilterOpen, setIsFilterOpen] = useState(false)
     const [isSearchOpen, setIsSearchOpen] = useState(false)
 
     return (

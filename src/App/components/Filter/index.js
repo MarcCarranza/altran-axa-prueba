@@ -13,43 +13,37 @@ import { getColorOptions } from '../../helpers/getColorOptions'
 import { getProfessionOptions } from '../../helpers/getProfessionOptions'
 
 // Constants
-import { FILTER_INPUTS } from '../../constants'
+import { FILTER_INPUTS, DEFAULT_FILTER } from '../../constants'
 
 
-function FilterComponent({ isOpen, colorOptions, professionOptions }) {
-    const filter = {
-        age: [],
-        weight: [],
-        height: [],
-        hairColor: null,
-        professions: []
-    }
-
-    function testFilter() {
-        console.log(filter)
-    }
+function FilterComponent({ isOpen, colorOptions, professionOptions, onApplyFilter }) {
+    let filter = DEFAULT_FILTER
 
     return (
         <div className={`filter ${isOpen ? 'filter__open' : 'filter__closed'}`}>
-            <div className={isOpen ? 'filter__form-open' : 'filter__form'}>
+            <div className={isOpen ? 'filter__form-open' : 'filter__form-closed'}>
                 {FILTER_INPUTS.map((input, index) => (
                     <FilterInput
                         key={index}
                         label={input.label}
                         inputType={input.inputType}
                         type={input.type}
-                        filterObj={filter}
+                        filter={filter}
                     />
                 ))}
                 <FilterSelect
                     label={'Hair Color'}
                     options={colorOptions}
+                    filter={filter}
+                    type={'hairColor'}
                 />
                 <FilterSelect
                     label={'Profession'}
                     options={professionOptions}
+                    filter={filter}
+                    type={'professions'}
                 />
-                <button onClick={testFilter}>
+                <button onClick={() => onApplyFilter(filter)}>
                     Apply
                 </button>
             </div>
@@ -62,4 +56,8 @@ const mapStateToProps = ({ data }) => ({
     professionOptions: getProfessionOptions(data)
 })
 
-export const Filter = connect(mapStateToProps, null)(FilterComponent)
+const mapDispatchToProps = dispatch => ({
+    onApplyFilter: (filter) => dispatch({ type: 'UPDATE_FILTER', filter })
+})
+
+export const Filter = connect(mapStateToProps, mapDispatchToProps)(FilterComponent)

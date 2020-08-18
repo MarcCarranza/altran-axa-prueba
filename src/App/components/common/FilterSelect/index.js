@@ -8,7 +8,13 @@ const selectStyles = {
     // TODO: Select Styles
 }
 
-function FilterSelectComponent({ label, options, filter }) {
+function FilterSelectComponent({ label, options, filter, type }) {
+    function onChangeOption (values) {
+        filter[type] = values 
+            ? values.map(colorObj => colorObj.value)
+            : []
+    }
+
     return (
         <div className='filter__select'>
             <label className='filter__select-label'>{label}</label>
@@ -16,7 +22,7 @@ function FilterSelectComponent({ label, options, filter }) {
                 <Select
                     options={options}
                     isMulti
-                    closeMenuOnSelect={false}
+                    onChange={onChangeOption}
                 />
             </div>
         </div>

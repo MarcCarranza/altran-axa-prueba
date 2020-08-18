@@ -2,6 +2,7 @@
     opacity: 0;
     max-height: 0;
     transition: all 0.3s;
+    padding: 0 .5rem;
 }
 
 .filter__closed {
@@ -9,6 +10,7 @@
 }
 
 .filter__open {
+    padding: 1rem .5rem;
     max-height: 250px;
     opacity: 1;
 }

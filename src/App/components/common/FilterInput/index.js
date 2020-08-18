@@ -1,9 +1,9 @@
 // Styles
 import './filterinput.css'
 
-function FilterInputComponent({ label, inputType, type, filterObj }) {
+function FilterInputComponent({ label, inputType, type, filter }) {
     function handleInput(e, index) {
-        filterObj[type][index] = e.target.value
+        filter[type][index] = e.target.value
     }
 
     function renderInputs() {

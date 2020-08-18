@@ -11,3 +11,11 @@ export const FILTER_INPUTS = [{
     inputType: 'number',
     type: 'weight',
 }]
+
+export const DEFAULT_FILTER = {
+    age: [],
+    weight: [],
+    height: [],
+    hairColor: [],
+    professions: []
+}
