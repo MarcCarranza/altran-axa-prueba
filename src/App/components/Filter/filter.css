@@ -4,11 +4,13 @@
 
 .filter__closed {
     height: 0;
+    opacity: 0;
 }
 
 .filter__open {
     height: 200px;
     max-height: auto;
+    opacity: 1;
 }
 
 .filter__form {

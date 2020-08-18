@@ -1,3 +1,6 @@
+// Dependencies
+import { connect } from 'react-redux'
+
 // Components
 import { FilterInput } from '../common/FilterInput'
 
@@ -5,7 +8,11 @@ import { FilterInput } from '../common/FilterInput'
 import './filter.css'
 import { FilterSelect } from '../common/FilterSelect'
 
-function FilterComponent({ isOpen }) {
+// Helpers
+import { getUniqOption, getColorOptions } from '../../helpers/getColorOptions'
+import { getProfessionOptions } from '../../helpers/getProfessionOptions'
+
+function FilterComponent({ isOpen, colorOptions, professionOptions }) {
     return (
         <div className={`filter ${isOpen ? 'filter__open' : 'filter__closed'}`}>
             <div className={isOpen ? 'filter__form-open' : 'filter__form'}>
@@ -24,12 +31,20 @@ function FilterComponent({ isOpen }) {
                     inputType={'number'}
                     type={'HEIGHT'}
                 />
-                <FilterSelect 
-                    value={'hair_color'}
+                <FilterSelect
+                    options={colorOptions}
+                />
+                <FilterSelect
+                    options={professionOptions}
                 />
             </div>
         </div>
     )
 }
 
-export const Filter = FilterComponent
+const mapStateToProps = ({ data }) => ({
+    colorOptions: getColorOptions(data),
+    professionOptions: getProfessionOptions(data)
+})
+
+export const Filter = connect(mapStateToProps, null)(FilterComponent)
