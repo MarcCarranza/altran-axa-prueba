@@ -1,8 +1,8 @@
 .gnome-directory {
     padding: 0 .5rem 1rem .5rem;
     display: grid;
-    grid-template-columns: calc(50% - 5px) calc(50% - 5px);
-    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(auto, 120px);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     row-gap: 10px;

@@ -1,0 +1,19 @@
+.filter {
+    transition: 0.3s all;
+}
+
+.filter__closed {
+    height: 0;
+}
+
+.filter__open {
+    height: 200px;
+}
+
+.filter__form {
+    display: none;
+}
+
+.filter__form-open {
+    display: block;
+}
