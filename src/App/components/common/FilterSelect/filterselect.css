@@ -1,0 +1,14 @@
+.filter__select {
+    display: flex;
+    padding-top: .3rem;
+    align-items: center;
+}
+
+.filter__select-label {
+    width: 100px;
+}
+
+.filter__select-wrapper {
+    width: calc(100% - 100px);
+}
+

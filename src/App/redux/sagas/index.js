@@ -1,17 +1,6 @@
 import { put, takeEvery, all } from 'redux-saga/effects'
 import axios from 'axios'
 
-const delay = (ms) => new Promise(res => setTimeout(res, ms))
-
-function* incrementAsync() {
-    yield delay(1000)
-    yield put({ type: 'INCREMENT' })
-}
-
-function* watchIncrementAsync() {
-    yield takeEvery('INCREMENT_ASYNC', incrementAsync)
-}
-
 function* watchFetchAsync() {
     yield takeEvery('FETCH', fetchGnomeData)
 }
@@ -59,7 +48,6 @@ const apiCallRequest = ({
 
 export default function* rootSaga() {
     yield all([
-        watchIncrementAsync(),
         fetchGnomeData(),
         watchFetchAsync()
     ])
