@@ -1,7 +1,7 @@
 # Front-end AXA assessment (AKA gnomeet)
 Summary of the technologies used, short documentation and explanation of the decisions taken.
 
-## Main Libraries
+## Libraries
 * [Webpack](https://webpack.js.org/)
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
