@@ -2,11 +2,6 @@
     opacity: 0;
     max-height: 0;
     transition: all 0.3s;
-    padding: 0 .5rem;
-}
-
-.filter__closed {
-    /* height: 0; */
 }
 
 .filter__open {
@@ -17,4 +12,8 @@
 
 .filter__form-open {
     display: block;
+}
+
+.filter__form-closed {
+    display: none;
 }

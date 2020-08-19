@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 // Components
 import { Filter } from '../Filter'
+import { Search } from '../Search'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilter, faSearch } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,6 +14,16 @@ function HeaderComponent() {
     const [isFilterOpen, setIsFilterOpen] = useState(false)
     const [isSearchOpen, setIsSearchOpen] = useState(false)
 
+    function onClickSearch () {
+        if (isFilterOpen) setIsFilterOpen(false)
+        setIsSearchOpen(!isSearchOpen)
+    }
+
+    function onClickFilter () {
+        if (isSearchOpen) setIsSearchOpen(false)
+        setIsFilterOpen(!isFilterOpen)
+    }
+
     return (
         <header className='header'>
             <div className='header__wrapper'>
@@ -20,16 +31,19 @@ function HeaderComponent() {
                 <div className='header__icons'>
                     <FontAwesomeIcon
                         icon={faFilter}
-                        onClick={() => setIsFilterOpen(!isFilterOpen)}
+                        onClick={onClickFilter}
                     />
                     <FontAwesomeIcon
                         icon={faSearch}
-                        onClick={() => setIsSearchOpen(!isSearchOpen)}
+                        onClick={onClickSearch}
                     />
                 </div>
             </div>
             <Filter
                 isOpen={isFilterOpen}
+            />
+            <Search
+                isOpen={isSearchOpen}
             />
         </header>
     )

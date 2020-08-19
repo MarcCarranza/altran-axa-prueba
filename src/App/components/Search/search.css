@@ -1,0 +1,19 @@
+.search {
+    opacity: 0;
+    max-height: 0;
+    transition: all .3s;
+}
+
+.search__open {
+    padding: 1rem .5rem;
+    max-height: 250px;
+    opacity: 1;
+}
+
+.search__input-wrapper-open {
+    display: block;
+}
+
+.search__input-wrapper-closed {
+    display: none;
+}
