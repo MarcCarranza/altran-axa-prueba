@@ -1,4 +1,6 @@
-export const filterGnomeData = ({ data, filter: { age, weight, height, hairColor, professions } }) => {
+import { searchGnomeData } from "./searchGnomeData"
+
+export const filterGnomeData = ({ data, filter: { age, weight, height, hairColor, professions }, searchTerm }) => {
     let filteredData = data
     
     if (age.length) {
@@ -30,6 +32,8 @@ export const filterGnomeData = ({ data, filter: { age, weight, height, hairColor
             return _.intersection(gnome.professions, professions).length
         })
     }
+
+    filteredData = searchGnomeData({ data: filteredData, searchTerm })
 
     return filteredData
 }

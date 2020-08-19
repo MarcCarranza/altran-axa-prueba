@@ -35,14 +35,12 @@ export default function fifthedition(state = STORE_INITIAL_STATE, action) {
         case 'UPDATE_SEARCH': 
             return {
                 ...state,
-                search: {
-                    ...action.search
-                }
+                searchTerm: action.searchTerm
             }
         case 'CLEAR_SEARCH': 
             return {
                 ...state,
-                search: DEFAULT_SEARCH
+                searchTerm: ''
             }
         default:
             return state

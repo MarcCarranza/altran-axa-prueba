@@ -10,10 +10,24 @@
     opacity: 1;
 }
 
-.search__input-wrapper-open {
+.search__input-open {
     display: block;
 }
 
-.search__input-wrapper-closed {
+.search__input-closed {
     display: none;
 }
+
+.search__input-wrapper {
+    display: flex;
+    padding-top: .3rem;
+}
+
+.search__input-input {
+    width: calc(100% - 100px);
+}
+
+.search__button {
+    width: 100px;
+}
+

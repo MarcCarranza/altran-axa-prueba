@@ -1,9 +1,10 @@
-export const searchGnomeData = ({ data, search: { name, lastname } }) => {
+export const searchGnomeData = ({ data, searchTerm }) => {
     let searchResult = data
 
-    if (name.length || lastname.length) {
-        searchResult = searchResult.filter(gnome => {
-            return gnome.name === name || gnome.lastname == lastname
-        })
+    if (searchTerm.length) {
+        searchResult = searchResult
+            .filter(gnome => gnome.name.toLowerCase().includes(searchTerm))
     }
+
+    return searchResult
 }

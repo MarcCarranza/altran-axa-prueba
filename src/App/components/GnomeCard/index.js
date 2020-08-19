@@ -1,6 +1,3 @@
-// Helpers
-import { displayOnlyName } from '../../helpers/displayOnlyName'
-
 // Styles
 import './gnomecard.css'
 
@@ -11,7 +8,7 @@ export function GnomeCard({ gnomeData: { thumbnail, name, age, professions } }) 
             <div className='gnome-card__data-wrapper'>
                 <div className='gnome-card__data'>
                     <p className='gnome-card__name'>
-                        {displayOnlyName(name)}
+                        {name}
                     </p>
                     <span className='gnome-card__age'>
                         {age}

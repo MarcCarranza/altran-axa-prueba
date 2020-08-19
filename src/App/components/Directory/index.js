@@ -13,13 +13,15 @@ import './directory.css'
 import { Loading } from '../common/Loading'
 
 
-function DirectoryComponent({ data, filter, isLoading }) {
+function DirectoryComponent({ data, filter, searchTerm, isLoading }) {
+    const filteredData = filterGnomeData({ data, filter, searchTerm })
+
     return (
         <div className="gnome-directory">
             {isLoading
                 ? <Loading />
-                : data.length > 0
-                    ? filterGnomeData({ data, filter }).map(gnome => (
+                : filteredData.length > 0
+                    ? filteredData.map(gnome => (
                         <GnomeCard
                             key={gnome.id}
                             gnomeData={gnome}
@@ -31,8 +33,8 @@ function DirectoryComponent({ data, filter, isLoading }) {
     )
 }
 
-const mapStateToProps = ({ data, filter, isLoading }) => ({
-    data, filter, isLoading
+const mapStateToProps = ({ data, filter, searchTerm, isLoading }) => ({
+    data, filter, searchTerm, isLoading
 })
 
 export const Directory = connect(mapStateToProps, null)(DirectoryComponent)
