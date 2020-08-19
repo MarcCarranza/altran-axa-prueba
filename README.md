@@ -1,7 +1,7 @@
 # Front-end AXA assessment (AKA gnomeet)
 Summary of the technologies used, short documentation and explanation of the decisions taken.
 
-## Main Libraries
+## Libraries
 * [Webpack](https://webpack.js.org/)
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
@@ -10,6 +10,8 @@ Summary of the technologies used, short documentation and explanation of the dec
 * [Lodash](https://lodash.com/)
 * [Axios](https://github.com/axios/axios)
 * [Babel](https://babeljs.io/)
+* [FontAwesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
+* [React-Select](https://react-select.com/home)
 
 ## Documentation
 ```
@@ -25,3 +27,4 @@ npm build
 ```
 
 ## Decisions
+WIP
