@@ -1,7 +1,7 @@
-import { DEFAULT_FILTER } from "../../constants"
-import { filter } from "lodash"
+// Constants
+import { STORE_INITIAL_STATE, DEFAULT_FILTER, DEFAULT_SEARCH } from "../../constants"
 
-export default function fifthedition(state = { data: [], filter: DEFAULT_FILTER}, action) {
+export default function fifthedition(state = STORE_INITIAL_STATE, action) {
     switch (action.type) {
         case 'FETCH_LOADING':
             return {
@@ -24,9 +24,25 @@ export default function fifthedition(state = { data: [], filter: DEFAULT_FILTER}
             return {
                 ...state,
                 filter: {
-                    ...filter,
                     ...action.filter
                 }
+            }
+        case 'CLEAR_FILTER': 
+            return {
+                ...state,
+                filter: DEFAULT_FILTER
+            }
+        case 'UPDATE_SEARCH': 
+            return {
+                ...state,
+                search: {
+                    ...action.search
+                }
+            }
+        case 'CLEAR_SEARCH': 
+            return {
+                ...state,
+                search: DEFAULT_SEARCH
             }
         default:
             return state

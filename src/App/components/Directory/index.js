@@ -10,28 +10,22 @@ import { filterGnomeData } from '../../helpers/filterGnomeData'
 
 // Style
 import './directory.css'
+import { Loading } from '../common/Loading'
 
 
 function DirectoryComponent({ data, filter, isLoading }) {
-    const [gnomeData, setGnomeData] = useState([])
-
-    useEffect(() => {
-        const filteredData = filterGnomeData({ data, filter })
-        setGnomeData(filteredData)
-    }, [data, filter])
-
     return (
         <div className="gnome-directory">
             {isLoading
-                ? <div>Loading</div>
-                : gnomeData.length > 0
-                    ? gnomeData.map(gnome => (
+                ? <Loading />
+                : data.length > 0
+                    ? filterGnomeData({ data, filter }).map(gnome => (
                         <GnomeCard
                             key={gnome.id}
                             gnomeData={gnome}
                         />
                     ))
-                    : <div>No data or results</div>
+                    : <div>No results</div>
             }
         </div>
     )
