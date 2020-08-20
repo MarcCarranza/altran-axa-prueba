@@ -28,7 +28,6 @@ export default function fifthedition(state = STORE_INITIAL_STATE, action) {
                 }
             }
         case 'CLEAR_FILTER': 
-            console.log(DEFAULT_FILTER)
             return {
                 ...state,
                 filter: {

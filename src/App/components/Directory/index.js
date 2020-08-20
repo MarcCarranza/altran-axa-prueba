@@ -1,5 +1,5 @@
 // Dependencies
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { connect } from 'react-redux'
 
 // Components
@@ -14,16 +14,11 @@ import './directory.css'
 
 
 function DirectoryComponent({ data, filter, searchTerm, isLoading, fetchGnomeData }) {
-    const [filteredData, setFilteredData] = useState([])
+    const filteredData = filterGnomeData({ data, filter, searchTerm })
 
     useEffect(() => {
         fetchGnomeData()
     }, [])
-
-    useEffect(() => {
-        const newData = filterGnomeData({ data, filter, searchTerm })
-        setFilteredData(newData)
-    }, [data, filter])
 
     return (
         <div className="gnome-directory">
@@ -47,7 +42,7 @@ const mapStateToProps = ({ data, filter, searchTerm, isLoading }) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    fetchGnomeData: () => dispatch({ type: 'FETCH'})
+    fetchGnomeData: () => dispatch({ type: 'FETCH' })
 })
 
 export const Directory = connect(mapStateToProps, mapDispatchToProps)(DirectoryComponent)

@@ -1,7 +1,11 @@
-import { put, takeEvery, all, take, fork } from 'redux-saga/effects'
+import { put, takeEvery, all } from 'redux-saga/effects'
 import axios from 'axios'
 
-function* fetchGnomeData() {
+function* watchFetchAsync() {
+    yield takeEvery('FETCH', fetchGnomeData)
+}
+
+function* fetchGnomeData (){
     yield put({ type: 'FETCH_LOADING' })
 
     let response = null
@@ -40,14 +44,6 @@ const apiCallRequest = ({
             method,
             [dataOrParams]: data
         })
-}
-
-function* watchFetchAsync() {
-    // yield takeEvery('FETCH', fetchGnomeData)
-
-    while (yield take('FETCH')) {
-        yield fork(fetchGnomeData)
-    }
 }
 
 export default function* rootSaga() {
