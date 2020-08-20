@@ -17,7 +17,7 @@ function* fetchGnomeData (){
         .then(res => {
             response = {
                 type: 'FETCH_SUCCESS',
-                data: res.data.Brastlewark // TODO: What about this?
+                data: res.data.Brastlewark
             }
         })
         .catch(error => {

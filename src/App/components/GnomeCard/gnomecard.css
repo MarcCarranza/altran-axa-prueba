@@ -80,3 +80,13 @@
     width: calc(100% - 2rem);
     text-align: center;
 }
+
+@media(max-width: 375px) {
+    .gnome-card {
+        font-size: .9rem;
+    }
+
+    .gnome-card__name {
+        font-size: .9rem;
+    }
+}

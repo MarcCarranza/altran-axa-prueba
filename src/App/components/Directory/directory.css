@@ -10,6 +10,12 @@
     background-color: rgb(68, 56, 52);
 }
 
+.gnome-directory__pagination {
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
 @media(min-width: 900px) {
     .gnome-directory {
         grid-template-columns: 1fr 1fr;

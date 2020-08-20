@@ -11,3 +11,17 @@
     justify-content: space-between;
     width: calc(100% - 2rem);
 }
+
+@media(max-width: 375px) {
+    .text-slider {
+        font-size: .85rem;
+    }
+    
+    .text-slider__icon {
+        width: 1rem;
+    }
+
+    .text-slider__slider {
+        width: calc(100% - 1rem);
+    }
+}
