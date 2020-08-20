@@ -9,3 +9,15 @@
     column-gap: 10px;
     background-color: rgb(68, 56, 52);
 }
+
+@media(min-width: 900px) {
+    .gnome-directory {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: 1200px) {
+    .gnome-directory {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

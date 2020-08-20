@@ -10,7 +10,7 @@ import './gnomecard.css'
 export function GnomeCard({ gnomeData: { thumbnail, name, age, professions, height, weight, friends } }) {
     return (
         <div className='gnome-card'>
-            <img src={thumbnail} className='gnome-card__img' loading='lazy' />
+            <img src={thumbnail} className='gnome-card__img' loading='lazy' alt='gnome avatar'/>
             <div className='gnome-card__data-wrapper'>
                 <div className='gnome-card__data'>
                     <p className='gnome-card__name'>

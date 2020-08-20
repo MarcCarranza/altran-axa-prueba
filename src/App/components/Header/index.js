@@ -10,7 +10,7 @@ import { faFilter, faSearch } from '@fortawesome/free-solid-svg-icons'
 // Styles
 import './header.css'
 
-function HeaderComponent() {
+export function Header() {
     const [isFilterOpen, setIsFilterOpen] = useState(false)
     const [isSearchOpen, setIsSearchOpen] = useState(false)
 
@@ -50,5 +50,3 @@ function HeaderComponent() {
         </header>
     )
 }
-
-export const Header = HeaderComponent
