@@ -1,13 +1,13 @@
 // Components
 import { CardTextSlider } from '../common/CardTextSlider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserTie, faUserFriends, faWeight, faArrowsAltV } from '@fortawesome/free-solid-svg-icons'
+import { faUserTie, faUserFriends, faWeight, faArrowsAltV, faTint } from '@fortawesome/free-solid-svg-icons'
 
 // Styles
 import './gnomecard.css'
 
 
-export function GnomeCard({ gnomeData: { thumbnail, name, age, professions, height, weight, friends } }) {
+export function GnomeCard({ gnomeData: { thumbnail, name, age, professions, height, weight, hair_color, friends } }) {
     return (
         <div className='gnome-card'>
             <img src={thumbnail} className='gnome-card__img' loading='lazy' alt='gnome avatar'/>
@@ -41,6 +41,17 @@ export function GnomeCard({ gnomeData: { thumbnail, name, age, professions, heig
                         </span>
                         <span>
                             {weight.toFixed(2)} kg
+                        </span>
+                    </div>
+                    <div className='measurements__weight'>
+                        <span className='measurements__icon'>
+                            <FontAwesomeIcon
+                                icon={faTint}
+                                color='white'
+                            />
+                        </span>
+                        <span>
+                            {hair_color}
                         </span>
                     </div>
                 </div>

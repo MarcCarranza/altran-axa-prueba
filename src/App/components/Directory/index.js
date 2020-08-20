@@ -23,18 +23,24 @@ function DirectoryComponent({ data, filter, searchTerm, isLoading, isFiltering, 
         fetchGnomeData()
     }, [])
 
-    function getPages () {
+    function getPages() {
         const pagesArray = []
 
-        for (let i = 0; i < filteredData.length; i++){
-            pagesArray.push(
-                <Button
-                    label={i + 1}
-                    onClick={() => setSelectedPage(i)}
-                    btnClass='clear'
-                />
-            )
+        if (window.innerWidth < 1000) {
+
+        } else {
+            for (let i = 0; i < filteredData.length; i++) {
+                pagesArray.push(
+                    <Button
+                        label={i + 1}
+                        onClick={() => setSelectedPage(i)}
+                        btnClass='page'
+                    />
+                )
+            }
         }
+
+
 
         return pagesArray
     }

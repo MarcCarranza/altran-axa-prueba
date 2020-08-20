@@ -43,14 +43,12 @@
 
 .gnome-card__measurements {
     display: flex;
+    font-size: .85rem;
+    justify-content: space-between;
 }
 
 .measurements__icon {
-    padding-right: .5rem;
-}
-
-.measurements__weight {
-    padding-left: 1rem;
+    padding-right: .3rem;
 }
 
 .professions__no-professions {
