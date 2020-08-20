@@ -1,11 +1,6 @@
 .no-results {
     color: white;
     position: absolute;
-    top: 10vh;
-    left: 0;
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 50vh;
+    left: 50vw;
 }

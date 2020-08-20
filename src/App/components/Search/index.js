@@ -29,6 +29,7 @@ function SearchComponent({ isOpen, onApplySearch, clearSearch, onClearSearch }) 
 
     function onClickSearch() {
         onApplySearch(searchTerm.toLowerCase())
+        inputEl.current = null
     }
 
     function onPressEnter(e) {
