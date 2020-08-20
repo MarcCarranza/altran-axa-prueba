@@ -34,6 +34,7 @@
 
 .gnome-card__name {
     font-size: 1rem;
+    font-family: "lato-black";
 }
 
 .gnome-card__age {
