@@ -33,11 +33,13 @@ export function Header() {
                         icon={faFilter}
                         onClick={onClickFilter}
                         color="white"
+                        style={{ cursor: "pointer" }}
                     />
                     <FontAwesomeIcon
                         icon={faSearch}
                         onClick={onClickSearch}
                         color="white"
+                        style={{ cursor: "pointer" }}
                     />
                 </div>
             </div>
