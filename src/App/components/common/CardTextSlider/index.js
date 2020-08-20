@@ -39,6 +39,7 @@ export function CardTextSlider({ textArray, icon }) {
                         icon={faCaretLeft}
                         onClick={onClickPrevious}
                         color='white'
+                        style={{ cursor: 'pointer' }}
                     />}
                 </span>
                 <span>
@@ -49,6 +50,7 @@ export function CardTextSlider({ textArray, icon }) {
                         icon={faCaretRight}
                         onClick={onClickNext}
                         color='white'
+                        style={{ cursor: 'pointer' }}
                     />}
                 </span>
             </div>

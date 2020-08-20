@@ -44,5 +44,9 @@
 }
 
 .btn-page:hover {
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(215, 215, 215);
+}
+
+.page-selected {
+    background-color: rgb(230, 230, 230);
 }

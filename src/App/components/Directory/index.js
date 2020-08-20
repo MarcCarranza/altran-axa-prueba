@@ -23,18 +23,59 @@ function DirectoryComponent({ data, filter, searchTerm, isLoading, isFiltering, 
         fetchGnomeData()
     }, [])
 
+    function previousPage() {
+        if (selectedPage > 0) {
+            setSelectedPage(selectedPage - 1)
+        }
+    }
+
+    function nextPage() {
+        if (selectedPage <= filteredData.length) {
+            setSelectedPage(selectedPage + 1)
+        }
+    }
+
     function getPages() {
         const pagesArray = []
 
         if (window.innerWidth < 1000) {
+            pagesArray.push(
+                <Button
+                    key={'previous'}
+                    label={'<'}
+                    onClick={previousPage}
+                    btnClass='page'
+                />
+            )
+
+            for (let i = selectedPage; i < selectedPage + 3; i++) {
+                pagesArray.push(
+                    <Button
+                        key={i}
+                        label={i + 1}
+                        onClick={() => setSelectedPage(i)}
+                        btnClass={`page ${i === selectedPage && 'page-selected'}`}
+                    />
+                )
+            }
+
+            pagesArray.push(
+                <Button
+                    key={'next'}
+                    label={'>'}
+                    onClick={nextPage}
+                    btnClass='page'
+                />
+            )
 
         } else {
             for (let i = 0; i < filteredData.length; i++) {
                 pagesArray.push(
                     <Button
+                        key={i}
                         label={i + 1}
                         onClick={() => setSelectedPage(i)}
-                        btnClass='page'
+                        btnClass={`page ${i === selectedPage && 'page-selected'}`}
                     />
                 )
             }
@@ -63,7 +104,7 @@ function DirectoryComponent({ data, filter, searchTerm, isLoading, isFiltering, 
                 }
             </div>
             <div className='gnome-directory__pagination'>
-                {getPages()}
+                {filteredData.length > 0 && getPages()}
             </div>
         </>
     )
