@@ -12,7 +12,7 @@ import './header.css'
 
 export function Header() {
     const [isFilterOpen, setIsFilterOpen] = useState(false)
-    const [isSearchOpen, setIsSearchOpen] = useState(false)
+    const [isSearchOpen, setIsSearchOpen] = useState(true)
 
     function onClickSearch () {
         if (isFilterOpen) setIsFilterOpen(false)

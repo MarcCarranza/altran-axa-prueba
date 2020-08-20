@@ -1,22 +1,32 @@
-.filter__input-wrapper {
-    display: flex;
-    padding-top: .3rem;
-}
-
-.filter__inputs-wrapper {
-    display: flex;
-    width: calc(100% - 100px);
+.filter__input-container {
+  display: flex;
+  padding-top: 0.3rem;
 }
 
 .filter__inputs-label {
-    width: 100px;
+  width: 100px;
+  color: white;
+}
+
+.filter__inputs-wrapper {
+  display: flex;
+  width: calc(100% - 100px);
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.filter__input-wrapper {
+  box-sizing: border-box;
+  width: calc(50% - 2px);
 }
 
 .filter__input {
-    width: calc(100% - 10px);
-    padding: 0;
-    border: none;
-    border-bottom: 1px solid black;
+  box-sizing: border-box;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -27,6 +37,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }

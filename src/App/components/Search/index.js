@@ -2,9 +2,15 @@
 import { useState } from 'react'
 import { connect } from 'react-redux'
 
+// Components
+import { Button } from '../common/Button'
+
+// Helpers
+import { detectEnter } from '../../helpers/detectEnter'
+
 // Styles
 import './search.css'
-import { detectEnter } from '../../helpers/detectEnter'
+
 
 
 function SearchComponent({ isOpen, onApplySearch }) {
@@ -32,11 +38,11 @@ function SearchComponent({ isOpen, onApplySearch }) {
                         onChange={onChangeInput}
                         onKeyDown={onPressEnter}
                     />
-                    <button
-                        className='search__button'
-                        onClick={onClickSearch}>
-                        Search
-                    </button>
+                    <Button
+                        onClick={onClickSearch}
+                        label={'Search'}
+                        btnClass='apply'
+                    />
                 </div>
             </div>
         </div>

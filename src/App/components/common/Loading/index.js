@@ -1,7 +1,7 @@
-function LoadingComponent () {
+export function Loading ({ label }) {
     return (
-        <div>Loading</div>
+        <div>
+            <p>{label}</p>
+        </div>
     )
 }
-
-export const Loading = LoadingComponent

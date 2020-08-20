@@ -13,7 +13,7 @@ import { filterGnomeData } from '../../helpers/filterGnomeData'
 import './directory.css'
 
 
-function DirectoryComponent({ data, filter, searchTerm, isLoading, fetchGnomeData }) {
+function DirectoryComponent({ data, filter, searchTerm, isLoading, isFiltering, isSearching, fetchGnomeData }) {
     const filteredData = filterGnomeData({ data, filter, searchTerm })
 
     useEffect(() => {
@@ -23,7 +23,9 @@ function DirectoryComponent({ data, filter, searchTerm, isLoading, fetchGnomeDat
     return (
         <div className="gnome-directory">
             {isLoading
-                ? <Loading />
+                ? <Loading 
+                    label={'Loading'}
+                />
                 : filteredData.length > 0
                     ? filteredData.map(gnome => (
                         <GnomeCard
@@ -37,8 +39,8 @@ function DirectoryComponent({ data, filter, searchTerm, isLoading, fetchGnomeDat
     )
 }
 
-const mapStateToProps = ({ data, filter, searchTerm, isLoading }) => ({
-    data, filter, searchTerm, isLoading
+const mapStateToProps = ({ data, filter, searchTerm, isLoading, isFiltering, isSearching }) => ({
+    data, filter, searchTerm, isLoading, isFiltering, isSearching 
 })
 
 const mapDispatchToProps = dispatch => ({

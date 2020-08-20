@@ -15,6 +15,7 @@ import { detectEnter } from '../../helpers/detectEnter'
 
 // Constants
 import { FILTER_INPUTS, DEFAULT_FILTER } from '../../constants'
+import { Button } from '../common/Button'
 
 
 function FilterComponent({
@@ -61,15 +62,18 @@ function FilterComponent({
                     filter={filter}
                     type={'professions'}
                 />
-                <div>
-                    <button onClick={onClickApply}>
-                        Apply
-                    </button>
-                    <button onClick={onClearFilter}>
-                        Clear
-                    </button>
+                <div className='filter__buttons'>
+                    <Button
+                        label={'Clear'}
+                        onClick={onClearFilter}
+                        btnClass='clear'
+                    />
+                    <Button
+                        label={'Apply'}
+                        onClick={onClickApply}
+                        btnClass='apply'
+                    />
                 </div>
-
             </div>
         </div>
     )

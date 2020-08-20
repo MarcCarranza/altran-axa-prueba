@@ -20,13 +20,15 @@
 
 .search__input-wrapper {
     display: flex;
+    justify-content: space-between;
 }
 
 .search__input-input {
-    width: calc(100% - 100px);
+    width: calc(100% - 110px);
+    border: none;
+    padding: 0.25rem;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 
-.search__button {
-    width: 100px;
-}
 

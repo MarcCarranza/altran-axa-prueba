@@ -13,18 +13,20 @@ function FilterInputComponent({ label, inputType, type, filter }) {
             case 'height':
                 return (
                     <div className='filter__inputs-wrapper'>
-                        <span>
+                        <span className='filter__input-wrapper'>
                             <input
                                 className='filter__input'
                                 type={inputType}
                                 onChange={(e) => handleInput(e, 0)}
+                                placeholder={'Min'}
                             />
                         </span>
-                        <span>
+                        <span className='filter__input-wrapper'>
                             <input
                                 type={inputType}
                                 className='filter__input'
                                 onChange={(e) => handleInput(e, 1)}
+                                placeholder={'Max'}
                             />
                         </span>
                     </div>
@@ -37,7 +39,7 @@ function FilterInputComponent({ label, inputType, type, filter }) {
     }
 
     return (
-        <div className='filter__input-wrapper'>
+        <div className='filter__input-container'>
             <label className='filter__inputs-label'>
                 {label}
             </label>

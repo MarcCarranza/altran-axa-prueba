@@ -17,3 +17,9 @@
 .filter__form-closed {
     display: none;
 }
+
+.filter__buttons {
+    padding-top: .5rem;
+    display: flex;
+    justify-content: flex-end;
+}
