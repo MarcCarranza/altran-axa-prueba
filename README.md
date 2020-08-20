@@ -12,6 +12,7 @@ Summary of the technologies used, short documentation and explanation of the dec
 * [Babel](https://babeljs.io/)
 * [FontAwesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
 * [React-Select](https://react-select.com/home)
+* [jest](https://jestjs.io/en/)
 
 ## Documentation
 Clone or download the project, open the folder in a terminal and type:
