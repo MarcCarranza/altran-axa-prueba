@@ -1,7 +1,9 @@
+import './loading.css'
+
 export function Loading ({ label }) {
     return (
-        <div>
-            <p>{label}</p>
+        <div className='loading'>
+            <p className='loading__label'>{label}</p>
         </div>
     )
 }

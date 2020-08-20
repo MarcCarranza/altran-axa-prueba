@@ -1,5 +1,5 @@
 // Dependencies
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { connect } from 'react-redux'
 
 // Components
@@ -13,8 +13,15 @@ import './search.css'
 
 
 
-function SearchComponent({ isOpen, onApplySearch }) {
+function SearchComponent({ isOpen, onApplySearch, clearSearch, onClearSearch }) {
     const [searchTerm, setSearchTerm] = useState('')
+    const inputEl = useRef(null)
+
+    useEffect(() => {
+        if (isOpen) {
+            inputEl.current.focus()
+        }
+    }, [isOpen])
 
     function onChangeInput({ target: { value } }) {
         setSearchTerm(value)
@@ -27,6 +34,11 @@ function SearchComponent({ isOpen, onApplySearch }) {
     function onPressEnter(e) {
         detectEnter({ key: e.key, func: onClickSearch })
     }
+    
+    function onClickClear () {
+        setSearchTerm('')
+        clearSearch()
+    }
 
     return (
         <div className={`search ${isOpen ? 'search__open' : 'search__close'}`}>
@@ -37,6 +49,13 @@ function SearchComponent({ isOpen, onApplySearch }) {
                         type='text'
                         onChange={onChangeInput}
                         onKeyDown={onPressEnter}
+                        ref={inputEl}
+                        value={searchTerm}
+                    />
+                    <Button
+                        onClick={onClickClear}
+                        label={'Clear'}
+                        btnClass='clear'
                     />
                     <Button
                         onClick={onClickSearch}
@@ -50,7 +69,8 @@ function SearchComponent({ isOpen, onApplySearch }) {
 }
 
 const mapDispatchToProps = dispatch => ({
-    onApplySearch: (searchTerm) => dispatch({ type: 'UPDATE_SEARCH', searchTerm })
+    onApplySearch: (searchTerm) => dispatch({ type: 'UPDATE_SEARCH', searchTerm }),
+    clearSearch: () => dispatch({ type: 'CLEAR_SEARCH' })
 })
 
 export const Search = connect(null, mapDispatchToProps)(SearchComponent)

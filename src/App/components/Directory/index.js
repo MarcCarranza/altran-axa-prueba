@@ -5,18 +5,18 @@ import { connect } from 'react-redux'
 // Components
 import { GnomeCard } from '../GnomeCard'
 import { Loading } from '../common/Loading'
+import { Button } from '../common/Button'
+import { NoResults } from '../common/NoResults'
 
 // Helpers
 import { filterGnomeData } from '../../helpers/filterGnomeData'
 
 // Style
 import './directory.css'
-import { Button } from '../common/Button'
 
 
 function DirectoryComponent({ data, filter, searchTerm, isLoading, isFiltering, isSearching, fetchGnomeData }) {
     const [selectedPage, setSelectedPage] = useState(0)
-
     const filteredData = _.chunk(filterGnomeData({ data, filter, searchTerm }), 96)
 
     useEffect(() => {
@@ -94,13 +94,14 @@ function DirectoryComponent({ data, filter, searchTerm, isLoading, isFiltering, 
                         label={'Loading'}
                     />
                     : filteredData.length > 0
-                        ? filteredData[selectedPage].map(gnome => (
-                            <GnomeCard
-                                key={gnome.id}
-                                gnomeData={gnome}
-                            />
-                        ))
-                        : <div>No results</div>
+                        ? filteredData[selectedPage]
+                            .map(gnome => (
+                                <GnomeCard
+                                    key={gnome.id}
+                                    gnomeData={gnome}
+                                />
+                            ))
+                        : <NoResults />
                 }
             </div>
             <div className='gnome-directory__pagination'>
