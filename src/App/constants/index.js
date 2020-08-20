@@ -22,6 +22,6 @@ export const DEFAULT_FILTER = {
 
 export const STORE_INITIAL_STATE = {
     data: [],
-    filter: DEFAULT_FILTER,
+    filter: { ...DEFAULT_FILTER },
     searchTerm: ''
 }

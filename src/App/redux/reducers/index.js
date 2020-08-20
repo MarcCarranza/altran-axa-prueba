@@ -1,5 +1,5 @@
 // Constants
-import { STORE_INITIAL_STATE, DEFAULT_FILTER, DEFAULT_SEARCH } from "../../constants"
+import { STORE_INITIAL_STATE, DEFAULT_FILTER } from "../../constants"
 
 export default function fifthedition(state = STORE_INITIAL_STATE, action) {
     switch (action.type) {
@@ -28,9 +28,12 @@ export default function fifthedition(state = STORE_INITIAL_STATE, action) {
                 }
             }
         case 'CLEAR_FILTER': 
+            console.log(DEFAULT_FILTER)
             return {
                 ...state,
-                filter: DEFAULT_FILTER
+                filter: {
+                    ...DEFAULT_FILTER
+                }
             }
         case 'UPDATE_SEARCH': 
             return {

@@ -32,10 +32,12 @@ function HeaderComponent() {
                     <FontAwesomeIcon
                         icon={faFilter}
                         onClick={onClickFilter}
+                        color="white"
                     />
                     <FontAwesomeIcon
                         icon={faSearch}
                         onClick={onClickSearch}
+                        color="white"
                     />
                 </div>
             </div>

@@ -1,5 +1,4 @@
 // Dependencies
-import { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 
 // Components

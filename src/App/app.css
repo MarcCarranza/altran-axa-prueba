@@ -13,3 +13,8 @@
 * {
     font-family: 'lato';
 }
+
+.app {
+    background-color: rgb(68, 56, 52);
+    min-height: 100vh;
+}

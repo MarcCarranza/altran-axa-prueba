@@ -2,13 +2,18 @@
     border-radius: 5px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .3);
     display: flex;
+    background-color: rgb(73,63,57);
+    color: rgb(255, 255, 255);
 }
 
 .gnome-card__img {
     width: 30%;
     min-width: 30%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .gnome-card__data-wrapper {
@@ -26,14 +31,24 @@
 }
 
 .gnome-card__name {
-    font-family: 'laconick';
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .gnome-card__age {
-    color: rgba(117,117,117,1);
+    color: rgb(217, 206, 131);
+}
+
+.gnome-card__measurements {
+    display: flex;
+}
+
+.measurements__height {
+
+}
+
+.measurements__weight {
+    padding-left: 1rem;
 }
 
 .gnome-card__professions {
-
 }

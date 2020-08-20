@@ -2,9 +2,10 @@
     padding: 0 .5rem 1rem .5rem;
     display: grid;
     grid-template-columns: 100%;
-    grid-auto-rows: minmax(auto, 120px);
+    grid-auto-rows: minmax(auto, 150px);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     row-gap: 10px;
     column-gap: 10px;
+    background-color: rgb(68, 56, 52);
 }

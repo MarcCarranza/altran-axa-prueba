@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 // Styles
 import './search.css'
+import { detectEnter } from '../../helpers/detectEnter'
 
 
 function SearchComponent({ isOpen, onApplySearch }) {
@@ -17,13 +18,19 @@ function SearchComponent({ isOpen, onApplySearch }) {
         onApplySearch(searchTerm.toLowerCase())
     }
 
+    function onPressEnter(e) {
+        detectEnter({ key: e.key, func: onClickSearch })
+    }
+
     return (
         <div className={`search ${isOpen ? 'search__open' : 'search__close'}`}>
             <div className={isOpen ? 'search__input-open' : 'search__input-closed'}>
                 <div className='search__input-wrapper'>
                     <input
                         className='search__input-input'
+                        type='text'
                         onChange={onChangeInput}
+                        onKeyDown={onPressEnter}
                     />
                     <button
                         className='search__button'

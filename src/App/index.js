@@ -7,9 +7,9 @@ import { Home } from './pages/Home'
 // Style
 import './app.css'
 
-function AppComponent({}) {
+function AppComponent() {
     return (
-        <div>
+        <div className='app'>
             <Home/>
         </div>
     )
