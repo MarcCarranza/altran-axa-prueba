@@ -15,7 +15,7 @@ import { filterGnomeData } from '../../helpers/filterGnomeData'
 import './directory.css'
 
 
-function DirectoryComponent({ data, filter, searchTerm, isLoading, isFiltering, isSearching, fetchGnomeData }) {
+function DirectoryComponent({ data, filter, searchTerm, isLoading, fetchGnomeData }) {
     const [selectedPage, setSelectedPage] = useState(0)
     const filteredData = _.chunk(filterGnomeData({ data, filter, searchTerm }), 96)
 
@@ -111,8 +111,8 @@ function DirectoryComponent({ data, filter, searchTerm, isLoading, isFiltering, 
     )
 }
 
-const mapStateToProps = ({ data, filter, searchTerm, isLoading, isFiltering, isSearching }) => ({
-    data, filter, searchTerm, isLoading, isFiltering, isSearching
+const mapStateToProps = ({ data, filter, searchTerm, isLoading }) => ({
+    data, filter, searchTerm, isLoading
 })
 
 const mapDispatchToProps = dispatch => ({

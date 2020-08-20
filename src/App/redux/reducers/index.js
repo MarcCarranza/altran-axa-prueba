@@ -25,28 +25,24 @@ export default function fifthedition(state = STORE_INITIAL_STATE, action) {
                 ...state,
                 filter: {
                     ...action.filter
-                },
-                isFiltering: true
+                }
             }
         case 'CLEAR_FILTER': 
             return {
                 ...state,
                 filter: {
                     ...DEFAULT_FILTER
-                },
-                isFiltering: true
+                }
             }
         case 'UPDATE_SEARCH': 
             return {
                 ...state,
-                searchTerm: action.searchTerm,
-                isSearching: true
+                searchTerm: action.searchTerm
             }
         case 'CLEAR_SEARCH': 
             return {
                 ...state,
-                searchTerm: '',
-                isSearching: true
+                searchTerm: ''
             }
         default:
             return state
