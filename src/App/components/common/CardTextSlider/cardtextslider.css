@@ -1,0 +1,13 @@
+.text-slider {
+    display: flex;
+}
+
+.text-slider__icon {
+    width: 2rem;
+}
+
+.text-slider__slider{
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 2rem);
+}

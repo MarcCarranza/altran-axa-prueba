@@ -19,9 +19,11 @@
 .gnome-card__data-wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 70%;
     max-width: 70%;
-    padding: .5rem
+    padding: .5rem;
+
 }
 
 .gnome-card__data {
@@ -42,13 +44,38 @@
     display: flex;
 }
 
-.measurements__height {
-
+.measurements__icon {
+    padding-right: .5rem;
 }
 
 .measurements__weight {
     padding-left: 1rem;
 }
 
-.gnome-card__professions {
+.professions__no-professions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.no-professions__icon {
+    width: 2rem;
+}
+
+.no-professions__text {
+    width: calc(100% - 2rem);
+    text-align: center;
+}
+
+.friends__no-friends {
+    display: flex;
+    justify-content: space-between;
+}
+
+.no-friends__icon {
+    width: 2rem;
+}
+
+.no-friends__text {
+    width: calc(100% - 2rem);
+    text-align: center;
 }
