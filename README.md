@@ -47,6 +47,7 @@ Althought I wanted to implement a solution like [react-virtualized](https://gith
 ###### Saga "FETCH_SUCCESS" test and filter clear functionality
 While the other tests work as expected, I bumped into some problems with how the function fetchGnomeData() is coded and how the async testing works.
 To keep it short: there's 2 put actions inside it, one for settings isLoading and another to set the data when it's done and I can't really figure out how to tackle this logic in the test within time.
+
 When the filter was being developed I didn't have in mind a clear button and [uncontrolled inputs](https://reactjs.org/docs/uncontrolled-components.html) were being used, and while the clear functionality works (clearing the filter), it doesn't clear the form. This was overlooked by me but I wanted to talk about it.
 
 ###### Gender of gnomes
