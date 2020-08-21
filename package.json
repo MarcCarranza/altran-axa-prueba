@@ -65,6 +65,5 @@
       "<rootDir>/__tests__/setup/setupEnzyme.js",
       "<rootDir>/__tests__/setup/global.js"
     ]
-    
   }
 }
