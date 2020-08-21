@@ -44,7 +44,7 @@ At first I thought of using React Router to show a detail page of the selected g
 ###### Pagination
 Althought I wanted to implement a solution like [react-virtualized](https://github.com/bvaughn/react-virtualized) for infinite scrolling, I decided to use pagination as it was a faster (and reliable) way of showing data to the user (and a page can be pinpointed easily).
 
-###### Saga "FETCH_SUCCESS" test and filter clear functionality
+###### Saga "FETCH_SUCCESS" Test and Filter Clear functionality
 While the other tests work as expected, I bumped into some problems with how the function fetchGnomeData() is coded and how the async testing works.
 To keep it short: there's 2 put actions inside it, one for settings isLoading and another to set the data when it's done and I can't really figure out how to tackle this logic in the test within time.
 
