@@ -23,6 +23,10 @@ function DirectoryComponent({ data, filter, searchTerm, isLoading, fetchGnomeDat
         fetchGnomeData()
     }, [])
 
+    useEffect(() => {
+        setSelectedPage(0)
+    }, [filter, searchTerm])
+
     function previousPage() {
         if (selectedPage > 0) {
             setSelectedPage(selectedPage - 1)
@@ -45,10 +49,11 @@ function DirectoryComponent({ data, filter, searchTerm, isLoading, fetchGnomeDat
                     label={'<'}
                     onClick={previousPage}
                     btnClass='page'
+                    isDisabled={selectedPage === 0}
                 />
             )
 
-            for (let i = selectedPage; i < selectedPage + 3; i++) {
+            for (let i = selectedPage; (i < selectedPage + 3 && i < filteredData.length); i++) {
                 pagesArray.push(
                     <Button
                         key={i}
@@ -65,6 +70,7 @@ function DirectoryComponent({ data, filter, searchTerm, isLoading, fetchGnomeDat
                     label={'>'}
                     onClick={nextPage}
                     btnClass='page'
+                    isDisabled={selectedPage === filteredData.length - 1}
                 />
             )
 
@@ -93,7 +99,7 @@ function DirectoryComponent({ data, filter, searchTerm, isLoading, fetchGnomeDat
                     ? <Loading
                         label={'Loading'}
                     />
-                    : filteredData.length > 0
+                    : filteredData.length > 0 && filteredData[selectedPage]
                         ? filteredData[selectedPage]
                             .map(gnome => (
                                 <GnomeCard

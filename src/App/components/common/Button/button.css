@@ -8,6 +8,12 @@
     transition: .3s all;
 }
 
+.btn:disabled:hover {
+    background-color: white;
+    color: rgb(147, 147, 147);
+    cursor: unset;
+}
+
 .btn-apply {
     background-color: rgb(255, 231, 75);
 }
