@@ -5,6 +5,7 @@
     padding: .25rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: .3s all;
 }
 
 .btn-apply {

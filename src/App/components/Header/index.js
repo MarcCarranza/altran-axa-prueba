@@ -14,12 +14,12 @@ export function Header() {
     const [isFilterOpen, setIsFilterOpen] = useState(false)
     const [isSearchOpen, setIsSearchOpen] = useState(false)
 
-    function onClickSearch () {
+    function onClickSearch() {
         if (isFilterOpen) setIsFilterOpen(false)
         setIsSearchOpen(!isSearchOpen)
     }
 
-    function onClickFilter () {
+    function onClickFilter() {
         if (isSearchOpen) setIsSearchOpen(false)
         setIsFilterOpen(!isFilterOpen)
     }
@@ -29,18 +29,22 @@ export function Header() {
             <div className='header__wrapper'>
                 <h1 className='header__title'>gnomeet</h1>
                 <div className='header__icons'>
-                    <FontAwesomeIcon
-                        icon={faFilter}
-                        onClick={onClickFilter}
-                        color="white"
-                        style={{ cursor: "pointer" }}
-                    />
-                    <FontAwesomeIcon
-                        icon={faSearch}
-                        onClick={onClickSearch}
-                        color="white"
-                        style={{ cursor: "pointer" }}
-                    />
+                    <span className='header__icon-btn'>
+                        <FontAwesomeIcon
+                            icon={faFilter}
+                            onClick={onClickFilter}
+                            color="white"
+                            style={{ cursor: "pointer" }}
+                        />
+                    </span>
+                    <span className='header__icon-btn'>
+                        <FontAwesomeIcon
+                            icon={faSearch}
+                            onClick={onClickSearch}
+                            color="white"
+                            style={{ cursor: "pointer" }}
+                        />
+                    </span>
                 </div>
             </div>
             <Filter
