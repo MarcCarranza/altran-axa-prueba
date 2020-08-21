@@ -1,5 +1,5 @@
 # Front-end AXA assessment (AKA gnomeet)
-Summary of the technologies used, short documentation and explanation of the decisions taken. Some of the explanations may talk about time or a timeframe as I proposed myself to have it done within a workweek.
+Summary of the technologies used, short documentation and explanation of the decisions taken. Some of the explanations may refer to time or a timeframe as I proposed myself to have it done within a workweek.
 
 ## Libraries 📚
 * [Webpack](https://webpack.js.org/)
