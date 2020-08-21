@@ -54,4 +54,4 @@ When the filter was being developed I didn't have in mind a clear button and [un
 As gender is a social construct (and I totally forgot about it), it has not been added.
 
 
-That's all I can think of right now, if you have any questions I would be happy to answer them.
+That's all I can think of right now, if you have any questions I would be happy to answer them!
