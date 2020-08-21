@@ -1,0 +1,472 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing App snapshot renders 1`] = `
+<div
+  className="app"
+>
+  <div>
+    <header
+      className="header"
+    >
+      <div
+        className="header__wrapper"
+      >
+        <h1
+          className="header__title"
+        >
+          gnomeet
+        </h1>
+        <div
+          className="header__icons"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-filter fa-w-16 "
+            color="white"
+            data-icon="filter"
+            data-prefix="fas"
+            focusable="false"
+            onClick={[Function]}
+            role="img"
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-search fa-w-16 "
+            color="white"
+            data-icon="search"
+            data-prefix="fas"
+            focusable="false"
+            onClick={[Function]}
+            role="img"
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        className="filter filter__closed"
+      >
+        <div
+          className="filter__form-closed"
+          onKeyDown={[Function]}
+        >
+          <div
+            className="filter__input-container"
+          >
+            <label
+              className="filter__inputs-label"
+            >
+              Age
+            </label>
+            <div
+              className="filter__inputs-wrapper"
+            >
+              <span
+                className="filter__input-wrapper"
+              >
+                <input
+                  className="filter__input"
+                  onChange={[Function]}
+                  placeholder="Min"
+                  type="number"
+                />
+              </span>
+              <span
+                className="filter__input-wrapper"
+              >
+                <input
+                  className="filter__input"
+                  onChange={[Function]}
+                  placeholder="Max"
+                  type="number"
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            className="filter__input-container"
+          >
+            <label
+              className="filter__inputs-label"
+            >
+              Height
+            </label>
+            <div
+              className="filter__inputs-wrapper"
+            >
+              <span
+                className="filter__input-wrapper"
+              >
+                <input
+                  className="filter__input"
+                  onChange={[Function]}
+                  placeholder="Min"
+                  type="number"
+                />
+              </span>
+              <span
+                className="filter__input-wrapper"
+              >
+                <input
+                  className="filter__input"
+                  onChange={[Function]}
+                  placeholder="Max"
+                  type="number"
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            className="filter__input-container"
+          >
+            <label
+              className="filter__inputs-label"
+            >
+              Weight
+            </label>
+            <div
+              className="filter__inputs-wrapper"
+            >
+              <span
+                className="filter__input-wrapper"
+              >
+                <input
+                  className="filter__input"
+                  onChange={[Function]}
+                  placeholder="Min"
+                  type="number"
+                />
+              </span>
+              <span
+                className="filter__input-wrapper"
+              >
+                <input
+                  className="filter__input"
+                  onChange={[Function]}
+                  placeholder="Max"
+                  type="number"
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            className="filter__select"
+          >
+            <label
+              className="filter__select-label"
+            >
+              Hair Color
+            </label>
+            <div
+              className="filter__select-wrapper"
+            >
+              <div
+                className=" css-2b097c-container"
+                onKeyDown={[Function]}
+              >
+                <div
+                  className=" css-yk16xz-control"
+                  onMouseDown={[Function]}
+                  onTouchEnd={[Function]}
+                >
+                  <div
+                    className=" css-g1d714-ValueContainer"
+                  >
+                    <div
+                      className=" css-1wa3eu0-placeholder"
+                    >
+                      Select...
+                    </div>
+                    <div
+                      className="css-b8ldur-Input"
+                    >
+                      <div
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={false}
+                          id="react-select-2-input"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className=" css-1hb7zxy-IndicatorsContainer"
+                  >
+                    <span
+                      className=" css-1okebmr-indicatorSeparator"
+                    />
+                    <div
+                      aria-hidden="true"
+                      className=" css-tlfecz-indicatorContainer"
+                      onMouseDown={[Function]}
+                      onTouchEnd={[Function]}
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="css-6q0nyr-Svg"
+                        focusable="false"
+                        height={20}
+                        viewBox="0 0 20 20"
+                        width={20}
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="filter__select"
+          >
+            <label
+              className="filter__select-label"
+            >
+              Profession
+            </label>
+            <div
+              className="filter__select-wrapper"
+            >
+              <div
+                className=" css-2b097c-container"
+                onKeyDown={[Function]}
+              >
+                <div
+                  className=" css-yk16xz-control"
+                  onMouseDown={[Function]}
+                  onTouchEnd={[Function]}
+                >
+                  <div
+                    className=" css-g1d714-ValueContainer"
+                  >
+                    <div
+                      className=" css-1wa3eu0-placeholder"
+                    >
+                      Select...
+                    </div>
+                    <div
+                      className="css-b8ldur-Input"
+                    >
+                      <div
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={false}
+                          id="react-select-3-input"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className=" css-1hb7zxy-IndicatorsContainer"
+                  >
+                    <span
+                      className=" css-1okebmr-indicatorSeparator"
+                    />
+                    <div
+                      aria-hidden="true"
+                      className=" css-tlfecz-indicatorContainer"
+                      onMouseDown={[Function]}
+                      onTouchEnd={[Function]}
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="css-6q0nyr-Svg"
+                        focusable="false"
+                        height={20}
+                        viewBox="0 0 20 20"
+                        width={20}
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="filter__buttons"
+          >
+            <button
+              className="btn btn-clear"
+              onClick={[Function]}
+            >
+              Clear
+            </button>
+            <button
+              className="btn btn-apply"
+              onClick={[Function]}
+            >
+              Apply
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="search search__close"
+      >
+        <div
+          className="search__input-closed"
+        >
+          <div
+            className="search__input-wrapper"
+          >
+            <input
+              className="search__input-input"
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              type="text"
+              value=""
+            />
+            <button
+              className="btn btn-clear"
+              onClick={[Function]}
+            >
+              Clear
+            </button>
+            <button
+              className="btn btn-apply"
+              onClick={[Function]}
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      className="gnome-directory"
+    >
+      <div
+        className="no-results"
+      >
+        No results
+      </div>
+    </div>
+    <div
+      className="gnome-directory__pagination"
+    />
+  </div>
+</div>
+`;
