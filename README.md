@@ -1,7 +1,7 @@
 # Front-end AXA assessment (AKA gnomeet)
-Summary of the technologies used, short documentation and explanation of the decisions taken.
+Summary of the technologies used, short documentation and explanation of the decisions taken. Some of the explanations may talk about time or a timeframe as I proposed myself to have it done within a workweek.
 
-## Libraries
+## Libraries 📚
 * [Webpack](https://webpack.js.org/)
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
@@ -13,24 +13,26 @@ Summary of the technologies used, short documentation and explanation of the dec
 * [FontAwesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
 * [React-Select](https://react-select.com/home)
 * [jest](https://jestjs.io/en/)
+* [enzyme](https://github.com/enzymejs/enzyme)
 
-## Documentation
+## Documentation 📄
 Clone or download the project, open the folder in a terminal and type:
 ```
 npm start
 ```
 It will automatically open the application in your default browser.
 
-Test is a WIP
+For running the tests provided with the project (:obsolete was added because some snapshots got obsolete while testing):
 ```
 npm test
+npm test:obsolete
 ```
 You can also build a production-like distribution of the application, it's just there out of habit.
 ```
 npm build
 ```
 
-## Decisions
+## Decisions 🤔
 ###### Design & Color Palette
 The design is mobile-first with some tweaks for PC viewing, there's not so much innovation and animations, I wanted it to be functional.
 
@@ -42,5 +44,13 @@ At first I thought of using React Router to show a detail page of the selected g
 ###### Pagination
 Althought I wanted to implement a solution like [react-virtualized](https://github.com/bvaughn/react-virtualized) for infinite scrolling, I decided to use pagination as it was a faster (and reliable) way of showing data to the user (and a page can be pinpointed easily).
 
+###### Saga "FETCH_SUCCESS" test and filter clear functionality
+While the other tests work as expected, I bumped into some problems with how the function fetchGnomeData() is coded and how the async testing works.
+To keep it short: there's 2 put actions inside it, one for settings isLoading and another to set the data when it's done and I can't really figure out how to tackle this logic in the test within time.
+When the filter was being developed I didn't have in mind a clear button and [uncontrolled inputs](https://reactjs.org/docs/uncontrolled-components.html) were being used, and while the clear functionality works (clearing the filter), it doesn't clear the form. This was overlooked by me but I wanted to talk about it.
+
 ###### Gender of gnomes
 As gender is a social construct (and I totally forgot about it), it has not been added.
+
+
+That's all I can think of right now, if you have any questions I would be happy to answer them.
