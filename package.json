@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "test": "jest",
-    "test:obsolete": "npm test -- -u",
+    "test:obsolete": "test -- -u",
     "build": "webpack --mode production"
   },
   "keywords": [],
