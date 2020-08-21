@@ -16,11 +16,11 @@ Summary of the technologies used, short documentation and explanation of the dec
 * [enzyme](https://github.com/enzymejs/enzyme)
 
 ## Documentation 📄
-Clone or download the project, open the folder in a terminal and type:
+Clone or download the project, open the folder in a terminal and type the command below, it will automatically open the application in your default browser.
 ```
 npm start
 ```
-It will automatically open the application in your default browser.
+
 
 For running the tests provided with the project (:obsolete was added because some snapshots got obsolete while testing):
 ```
