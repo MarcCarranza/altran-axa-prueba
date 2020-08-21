@@ -34,7 +34,7 @@ npm build
 
 ## Decisions 🤔
 ###### Design & Color Palette
-The design is mobile-first with some tweaks for PC viewing, there's not so much innovation and animations, I wanted it to be functional.
+The design is mobile-first with some tweaks for PC viewing I wanted it to be functional as possible so I wouldn't say it shines by it's innovation or animations.
 
 As for the colors, I started searching for tavern-like color palettes (brown, yellow, green, shades of blue...) and found [this one](https://www.color-hex.com/color-palette/75628) as a "temporal" design, but after getting accostumed to it I kinda like it.
 
