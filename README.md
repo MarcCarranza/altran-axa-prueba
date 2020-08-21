@@ -36,7 +36,9 @@ npm build
 ###### Design & Color Palette
 The design is mobile-first with some tweaks for PC viewing, I wanted it to be functional as possible so I wouldn't say it shines by it's innovation or animations.
 
-As for the colors, I started searching for tavern-like color palettes (brown, yellow, green, shades of blue...) and found [this one](https://www.color-hex.com/color-palette/75628) as a "temporal" design, but after getting accostumed to it I kinda like it.
+As for the colors, I started searching for tavern-like color palettes (brown, yellow, green, shades of blue...) and found [this one](https://www.color-hex.com/color-palette/75628) as a "temporal" design, but after getting accostumed to I kinda like it.
+
+I also wanted to use Context for theming, but it was not either a priority or there was enough time.
 
 ###### Gnome Details
 At first I thought of using React Router to show a detail page of the selected gnome, sending the data via Link + location, but with 1000+ gnomes I focused on making the data as accesible as possible, having to go into another page and then having to go back would not be a good UX practice. 
