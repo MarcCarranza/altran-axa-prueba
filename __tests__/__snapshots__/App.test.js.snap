@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing Connected App rendering with mockStore 1`] = `
+exports[`Testing Connected App rendering App with mockStore 1`] = `
 <div
   className="app"
 >

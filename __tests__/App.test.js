@@ -24,11 +24,29 @@ describe('Testing Connected App', () => {
         )
     })
 
-    it('rendering with mockStore', () => {
+    it('rendering App with mockStore', () => {
         expect(component.toJSON()).toMatchSnapshot()
     })
 
-    it('reducers test', () => {
+    it('reducer initial test', () => {
         expect(reducer(undefined, {})).toEqual(STORE_INITIAL_STATE)
+    })
+
+    it('FETCH_SUCCESS test', () => {
+        const mockData = [{
+            "id": 0,
+            "name": "Nota halfling",
+            "thumbnail": "https://pbs.twimg.com/media/EG9MhrVWoAAo29F?format=jpg&name=small",
+            "age": 360,
+            "weight": 30.123,
+            "height": 100.000,
+            "hair_color": "RGB",
+            "professions": [],
+            "friends": []
+        }]
+
+        expect(
+            reducer({}, { type: 'FETCH_SUCCESS', data: mockData })
+        ).toEqual({ data: mockData, isLoading: false })
     })
 })
