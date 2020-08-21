@@ -16,6 +16,7 @@ import { detectEnter } from '../../helpers/detectEnter'
 // Constants
 import { FILTER_INPUTS, DEFAULT_FILTER } from '../../constants'
 import { Button } from '../common/Button'
+import { useState, useEffect } from 'react'
 
 
 function FilterComponent({
@@ -25,7 +26,9 @@ function FilterComponent({
     onApplyFilter,
     onClearFilter
 }) {
-    let filter = { ...DEFAULT_FILTER }
+    const [colorValues, setColorValues] = useState([])
+    const [professionValues, setProfessionValues] = useState([])
+    const filter = { ...DEFAULT_FILTER }
 
     function onClickApply() {
         onApplyFilter(filter)
@@ -34,6 +37,13 @@ function FilterComponent({
     function onPressEnter(e) {
         detectEnter({ key: e.key, func: onClickApply })
     }
+
+    function onClickClear() {
+        setColorValues([])
+        setProfessionValues([])
+        onClearFilter()
+    }
+    
 
     return (
         <div className={`filter ${isOpen ? 'filter__open' : 'filter__closed'}`}>
@@ -55,17 +65,21 @@ function FilterComponent({
                     options={colorOptions}
                     filter={filter}
                     type={'hairColor'}
+                    onSelect={(values) => setColorValues(values)}
+                    value={colorValues}
                 />
                 <FilterSelect
                     label={'Profession'}
                     options={professionOptions}
                     filter={filter}
                     type={'professions'}
+                    onSelect={(values) => setProfessionValues(values)}
+                    value={professionValues}
                 />
                 <div className='filter__buttons'>
                     <Button
                         label={'Clear'}
-                        onClick={onClearFilter}
+                        onClick={onClickClear}
                         btnClass='clear'
                     />
                     <Button
@@ -86,7 +100,7 @@ const mapStateToProps = ({ data }) => ({
 
 const mapDispatchToProps = dispatch => ({
     onApplyFilter: (filter) => dispatch({ type: 'UPDATE_FILTER', filter }),
-    onClearFilter: (filter) => dispatch({ type: 'CLEAR_FILTER', filter })
+    onClearFilter: () => dispatch({ type: 'CLEAR_FILTER' })
 })
 
 export const Filter = connect(mapStateToProps, mapDispatchToProps)(FilterComponent)

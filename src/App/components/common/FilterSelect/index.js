@@ -4,12 +4,11 @@ import Select from 'react-select'
 // Styles
 import './filterselect.css'
 
-const selectStyles = {
-    // TODO: Select Styles
-}
 
-function FilterSelectComponent({ label, options, filter, type }) {
+function FilterSelectComponent({ label, options, filter, type, onSelect, value }) {
     function onChangeOption (values) {
+        onSelect(values)
+
         filter[type] = values 
             ? values.map(colorObj => colorObj.value)
             : []
@@ -23,6 +22,7 @@ function FilterSelectComponent({ label, options, filter, type }) {
                     options={options}
                     isMulti
                     onChange={onChangeOption}
+                    value={value}
                 />
             </div>
         </div>
