@@ -1,27 +1,26 @@
 import { put, takeEvery, all } from 'redux-saga/effects'
 import axios from 'axios'
 
-function* watchFetchAsync() {
+export function* watchFetchAsync() {
     yield takeEvery('FETCH', fetchGnomeData)
 }
 
-function* fetchGnomeData (){
+ export function* fetchGnomeData (){
     yield put({ type: 'FETCH_LOADING' })
-
-    let response = null
-    yield apiCallRequest({
+   
+    const response = yield apiCallRequest({
         url: 'https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json',
         method: 'GET',
         data: {}
     })
         .then(res => {
-            response = {
+            return {
                 type: 'FETCH_SUCCESS',
                 data: res.data.Brastlewark
             }
         })
         .catch(error => {
-            response = {
+            return  {
                 type: 'FETCH_FAIL',
                 error
             }

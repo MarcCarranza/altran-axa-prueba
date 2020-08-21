@@ -1,12 +1,17 @@
+// __tests__
 import { Provider } from 'react-redux'
 import renderer from 'react-test-renderer'
 import configureMockStore from 'redux-mock-store'
+import { STORE_INITIAL_STATE, MOCK_DATA, MOCK_RESPONSE } from './constants'
 
+// Src
 import { App } from '../src/App'
-import { STORE_INITIAL_STATE } from '../src/App/constants'
 import reducer from '../src/App/redux/reducers'
+import { watchFetchAsync, fetchGnomeData } from '../src/App/redux/sagas'
+import { takeEvery, put } from 'redux-saga/effects'
 
 const mockStore = configureMockStore([])
+const runAllPromises = () => new Promise(setImmediate)
 
 describe('Testing Connected App', () => {
     let store
@@ -32,21 +37,38 @@ describe('Testing Connected App', () => {
         expect(reducer(undefined, {})).toEqual(STORE_INITIAL_STATE)
     })
 
-    it('FETCH_SUCCESS test', () => {
-        const mockData = [{
-            "id": 0,
-            "name": "Nota halfling",
-            "thumbnail": "https://pbs.twimg.com/media/EG9MhrVWoAAo29F?format=jpg&name=small",
-            "age": 360,
-            "weight": 30.123,
-            "height": 100.000,
-            "hair_color": "RGB",
-            "professions": [],
-            "friends": []
-        }]
-
+    it('Reducer "FETCH_SUCCESS" test', () => {
         expect(
-            reducer({}, { type: 'FETCH_SUCCESS', data: mockData })
-        ).toEqual({ data: mockData, isLoading: false })
+            reducer({}, { type: 'FETCH_SUCCESS', data: MOCK_DATA })
+        ).toEqual({ data: MOCK_DATA, isLoading: false })
+    })
+
+    it('Sagas dispatch "FETCH"', () => {
+        const generator = watchFetchAsync()
+        expect(generator.next().value)
+            .toEqual(takeEvery('FETCH', fetchGnomeData))
+
+        expect(generator.next().done).toBeTruthy()
+    })
+
+    // This test is not correct, it works for FETCH_LOADING but it's different for FETCH_SUCCESS
+    it('Sagas dispatch "FETCH_LOADING" then "FETCH_SUCCESS"', async () => {
+        const generator = fetchGnomeData()
+
+        await runAllPromises() // Promises have to be executed and .then doesn't work
+
+        expect(generator.next(MOCK_RESPONSE).value)
+            .toEqual(
+                put({ type: 'FETCH_LOADING' })
+            )
+
+        generator.next()
+
+        expect(generator.next(MOCK_RESPONSE).value)
+            .toEqual(
+                put(MOCK_RESPONSE)
+            )
+
+        expect(generator.next().done).toBeTruthy()
     })
 })
