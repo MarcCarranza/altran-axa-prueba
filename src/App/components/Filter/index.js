@@ -31,7 +31,12 @@ function FilterComponent({
     const filter = { ...DEFAULT_FILTER }
 
     function onClickApply() {
-        onApplyFilter(filter)
+        const updatedFilter = {
+            ...filter,
+            hairColor: colorValues.map(colorObj => colorObj.value),
+            professions: professionValues.map(professionObj => professionObj.value)
+        }
+        onApplyFilter(updatedFilter)
     }
 
     function onPressEnter(e) {
@@ -63,16 +68,12 @@ function FilterComponent({
                 <FilterSelect
                     label={'Hair Color'}
                     options={colorOptions}
-                    filter={filter}
-                    type={'hairColor'}
                     onSelect={(values) => setColorValues(values)}
                     value={colorValues}
                 />
                 <FilterSelect
                     label={'Profession'}
                     options={professionOptions}
-                    filter={filter}
-                    type={'professions'}
                     onSelect={(values) => setProfessionValues(values)}
                     value={professionValues}
                 />

@@ -5,15 +5,7 @@ import Select from 'react-select'
 import './filterselect.css'
 
 
-function FilterSelectComponent({ label, options, filter, type, onSelect, value }) {
-    function onChangeOption (values) {
-        onSelect(values)
-
-        filter[type] = values 
-            ? values.map(colorObj => colorObj.value)
-            : []
-    }
-
+function FilterSelectComponent({ label, options, onSelect, value }) {
     return (
         <div className='filter__select'>
             <label className='filter__select-label'>{label}</label>
@@ -21,7 +13,7 @@ function FilterSelectComponent({ label, options, filter, type, onSelect, value }
                 <Select
                     options={options}
                     isMulti
-                    onChange={onChangeOption}
+                    onChange={(values) => onSelect(values)}
                     value={value}
                 />
             </div>
