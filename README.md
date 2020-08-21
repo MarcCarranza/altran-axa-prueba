@@ -41,7 +41,7 @@ As for the colors, I started searching for tavern-like color palettes (brown, ye
 I also wanted to use Context for theming, but it was not either a priority or there was enough time.
 
 ###### Gnome Details
-At first I thought of using React Router to show a detail page of the selected gnome, sending the data via Link + location, but with 1000+ gnomes I focused on making the data as accesible as possible, having to go into another page and then having to go back would not be a good UX practice. 
+At first I thought of using React Router to show a detail page of the selected gnome, sending the data via Link + location, but with 1000+ gnomes I focused on making the data as accesible as possible. Having to go into another page and then having to go back would not be a good UX practice. 
 
 ###### Pagination
 Althought I wanted to implement a solution like [react-virtualized](https://github.com/bvaughn/react-virtualized) for infinite scrolling, I decided to use pagination as it was a faster (and reliable) way of showing data to the user (and a page can be pinpointed easily).
