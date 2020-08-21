@@ -51,11 +51,11 @@ describe('Testing Connected App', () => {
         expect(generator.next().done).toBeTruthy()
     })
 
-    // This test is not correct, it works for FETCH_LOADING but it's different for FETCH_SUCCESS
+    // This test is not correct, it works for FETCH_LOADING but works differently for FETCH_SUCCESS
     it('Sagas dispatch "FETCH_LOADING" then "FETCH_SUCCESS"', async () => {
         const generator = fetchGnomeData()
 
-        await runAllPromises() // Promises have to be executed and .then doesn't work
+        await runAllPromises() // Promises have to be executed and .then can't be used
 
         expect(generator.next(MOCK_RESPONSE).value)
             .toEqual(
