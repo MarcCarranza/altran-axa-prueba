@@ -25,7 +25,7 @@ npm start
 For running the tests provided with the project (:obsolete was added because some snapshots got obsolete while testing):
 ```
 npm test
-npm test:obsolete
+npm run test:obsolete
 ```
 You can also build a production-like distribution of the application, it's just there out of habit.
 ```
