@@ -46,9 +46,11 @@ At first I thought of using React Router to show a detail page of the selected g
 ###### Pagination
 Althought I wanted to implement a solution like [react-virtualized](https://github.com/bvaughn/react-virtualized) for infinite scrolling, I decided to use pagination as it was a faster (and reliable) way of showing data to the user (and a page can be pinpointed easily).
 
-###### Saga "FETCH_SUCCESS" Test and Filter Clear functionality
+###### Saga "FETCH_SUCCESS" Test
 While the other tests work as expected, I bumped into some problems with how the function fetchGnomeData() is coded and how the async testing works.
 To keep it short: there's 2 put actions inside it, one for settings isLoading and another to set the data when it's done and I can't really figure out how to tackle this logic in the test within time.
+
+###### Filter Clear functionality
 
 When the filter was being developed I didn't have in mind a clear button and [uncontrolled inputs](https://reactjs.org/docs/uncontrolled-components.html) were being used, and while the clear functionality works (clearing the filter), it doesn't clear the form. This was overlooked by me, as well as other user interactions with the filter/search, but I think it should be pointed.
 
